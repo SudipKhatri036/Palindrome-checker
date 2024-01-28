@@ -3,16 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Palindrome Checker</title>
   </head>
   <body>
     <div id="content-container">
-      <div>
+      <div id="content">
         <h1>Palindrome Checker</h1>
         <div class="palindrome-container">
-          <input type="text" id="text-input" />
+          <input
+            type="text"
+            id="text-input"
+            placeholder="Enter Text to check"
+          />
           <button id="check-btn">Check</button>
-          <div id="result"></div>
+        </div>
+        <div id="result">
+          <span id="result-highlight">MAdam</span> is a palindrome.
         </div>
       </div>
     </div>

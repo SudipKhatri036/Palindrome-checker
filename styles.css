@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+#content-container {
+  max-width: 1440px;
+  width: 100%;
+  height: calc(100vh - 0px);
+  display: flex;
+  background-color: #0e0c0d;
+  justify-content: center;
+  align-items: center;
+}
+
+#content {
+  border: 2px solid #c0a674;
+  display: flex;
+  flex-direction: column;
+  background-color: #111d1c;
+  align-items: center;
+  padding: 2rem;
+  color: #fdfcfc;
+  border-radius: 20px;
+}
+
+#content h1 {
+  font-size: 2rem;
+  color: #c0a674;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.palindrome-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#text-input {
+  outline: none;
+  padding: 0.6rem 1rem;
+  margin-right: 1rem;
+  background-color: transparent;
+  color: #fdfcfc;
+  border: none;
+  border-bottom: 2px solid #c0a674;
+  transition: all 0.3s ease;
+}
+
+#text-input:focus {
+  border-bottom: 2px solid #0e0c0d;
+}
+
+#check-btn {
+  border: none;
+  font-weight: 700;
+  background-color: #0e0c0d;
+  color: #fdfcfc;
+  padding: 0.3rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 2px solid #c0a674;
+  font-family: inherit;
+  transition: all 0.3s ease-in-out;
+}
+
+#check-btn:hover {
+  background-color: #c0a674;
+  color: #0e0c0d;
+  border: 2px solid #0e0c0d;
+}
+
+#result {
+  margin-top: 2rem;
+  background-color: #0e0c0d;
+  padding: 1rem 2rem;
+  border: 2px solid #c0a674;
+  border-radius: 8px;
+}
+
+#result-highlight {
+  color: #c0a674;
+}
+/* Media Query Starts */
+@media only screen and (max-width: 455px) {
+  body {
+    font-size: 0.8rem;
+  }
+  #content h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 354px) {
+  #content h1 {
+    font-size: 1rem;
+  }
+  .palindrome-container {
+    flex-direction: column;
+  }
+  #check-btn {
+    margin-top: 1rem;
+  }
+}
+/* Media Query Ends */
