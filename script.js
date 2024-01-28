@@ -5,7 +5,7 @@ const checkBtn = document.getElementById("check-btn");
 // function to check Palindrome
 function updateResult() {
   // Getting User Value
-  const userEnteredValue = inputEl.value;
+  let userEnteredValue = inputEl.value;
 
   //   Checking if user have entered value
   if (userEnteredValue) {
@@ -13,12 +13,15 @@ function updateResult() {
     // Checking Palindrome or not
     if (isPalindrome(newValue)) {
       resultEl.innerHTML = `<p><span id="result-highlight">${userEnteredValue}</span> is a palindrome.</p>`;
+      resultEl.style.display = "block";
     } else {
       resultEl.innerHTML = `<p><span id="result-highlight">${userEnteredValue}</span> is not a palindrome.</p>`;
+      resultEl.style.display = "block";
     }
   } else {
     alert("Please input a value");
   }
+  inputEl.value = "";
 }
 
 // Function for removing spaces and special characters
@@ -30,7 +33,7 @@ function validateString(str) {
 
 // Function for checking if value is palindrome
 function isPalindrome(str) {
-  let result = str === str.split("").reverse().join("") ? true : false;
+  let result = str === str.split("").reverse().join("");
   return result;
 }
 
